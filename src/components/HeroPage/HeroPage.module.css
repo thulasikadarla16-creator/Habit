@@ -1,0 +1,336 @@
+.heroContainer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #030303;
+}
+
+.backgroundGradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(135deg, 
+    rgba(99, 102, 241, 0.02) 0%, 
+    transparent 50%, 
+    rgba(244, 63, 94, 0.02) 100%
+  );
+  filter: blur(3rem);
+}
+
+.shapesContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.elegantShape {
+  position: absolute;
+}
+
+.shapeContainer {
+  position: relative;
+}
+
+.shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  box-shadow: 0 2px 16px -2px rgba(255, 255, 255, 0.04);
+}
+
+.shape::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.12), transparent 70%);
+  border-radius: inherit;
+}
+
+/* Gradient classes */
+.fromIndigo {
+  background: linear-gradient(to right, rgba(99, 102, 241, 0.25), transparent);
+}
+
+.fromRose {
+  background: linear-gradient(to right, rgba(244, 63, 94, 0.25), transparent);
+}
+
+.fromViolet {
+  background: linear-gradient(to right, rgba(139, 92, 246, 0.25), transparent);
+}
+
+.fromAmber {
+  background: linear-gradient(to right, rgba(245, 158, 11, 0.25), transparent);
+}
+
+.fromEmerald {
+  background: linear-gradient(to right, rgba(16, 185, 129, 0.25), transparent);
+}
+
+.fromBlue {
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.25), transparent);
+}
+
+.fromPurple {
+  background: linear-gradient(to right, rgba(147, 51, 234, 0.25), transparent);
+}
+
+.fromTeal {
+  background: linear-gradient(to right, rgba(20, 184, 166, 0.25), transparent);
+}
+
+/* Shape positions */
+.shapeTopLeft {
+  left: -15%;
+  top: -10%;
+}
+
+.shapeBottomRight {
+  right: -20%;
+  bottom: -5%;
+}
+
+.shapeMiddleLeft {
+  left: -5%;
+  top: 40%;
+}
+
+.shapeTopRight {
+  right: 10%;
+  top: 5%;
+}
+
+.shapeCenterRight {
+  right: -10%;
+  top: 45%;
+}
+
+.shapeBottomLeft {
+  left: 20%;
+  bottom: 10%;
+}
+
+.shapeTopCenter {
+  left: 40%;
+  top: 15%;
+}
+
+.shapeMiddle {
+  left: 25%;
+  top: 60%;
+}
+
+.contentContainer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.content {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  letter-spacing: -0.025em;
+  line-height: 0.9;
+}
+
+.titleFirst {
+  background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin-bottom: 0;
+}
+
+.titleSecond {
+  background: linear-gradient(to right, 
+    rgba(99, 102, 241, 0.9) 0%, 
+    rgba(255, 255, 255, 0.95) 50%, 
+    rgba(244, 63, 94, 0.9) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Pacifico', cursive;
+  font-size: 2.8rem;
+  display: block;
+  line-height: 0.9;
+  margin-top: 0;
+}
+
+.description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+.signInButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 0;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signInButton:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.signInButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.googleIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.errorMessage {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 0.375rem;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.footerText {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.overlayGradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, 
+    #030303 0%, 
+    transparent 50%, 
+    rgba(3, 3, 3, 0.8) 100%
+  );
+  pointer-events: none;
+}
+
+/* Responsive design */
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .titleSecond {
+    font-size: 3.5rem;
+  }
+  
+  .description {
+    font-size: 1.125rem;
+  }
+  
+  .content {
+    gap: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .titleSecond {
+    font-size: 4rem;
+  }
+  
+  .description {
+    font-size: 1.25rem;
+  }
+  
+  .contentContainer {
+    padding: 0 1.5rem;
+  }
+  
+  .content {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 3.5rem;
+  }
+  
+  .titleSecond {
+    font-size: 4.5rem;
+  }
+  
+  .description {
+    font-size: 1.375rem;
+  }
+  
+  .content {
+    gap: 1.25rem;
+  }
+}
